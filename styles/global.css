@@ -37,4 +37,14 @@
     --font-family-heading: 'Baloo 2', serif;
     --font-family-text: 'Open Sans', serif;
 
+    --font-logo: 2.5rem var(--font-family-logo);
+    --font-heading-md: bold 1.75rem var(--font-family-heading);
+    --font-body-md-light: 300 1rem var(--font-family-text);
+    --font-body-md: 600 1rem var(--font-family-text);
+    --font-body-sm: 600 0.875rem var(--font-family-text);
+    --font-body-xs: 600 0.75rem var(--font-family-text); 
+}
+
+body {
+    background-color: var(--shape-background);
 }
