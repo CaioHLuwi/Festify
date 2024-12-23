@@ -1,5 +1,5 @@
-form {
-    & fieldset {
+fieldset {
+        margin-top: 3rem;
         display: flex;
         flex-direction: column;
         gap: .75rem;
@@ -113,5 +113,82 @@ form {
                 }
             }
         }
+
+        & .color-selection {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(2.5rem, 1fr));
+
+            & input {
+                appearance: none;
+                width: 2.5rem;
+                height: 2.5rem;
+                background-color: var(--shape-button);
+                border-radius: 50%;
+            }
+
+            & .color-item {
+                position: relative;
+
+                &:has(:checked) {  
+
+                    & input {
+                        border: 1px solid var(--brand-light);
+                    }
+                }
+
+                & .color-background {
+                    top: 0.5rem;
+                    left: 0.5rem;
+                    position: absolute;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    border-radius: 50%;
+                    border: none;
+                }
+
+                & .light {
+                    background-color: var(--brand-light);
+                }
+
+                & .navy {
+                    background-color: var(--accent-navy);
+                }
+
+                & .purple {
+                    background-color: var(--accent-purple);
+                }
+
+                & .fuschia {
+                    background-color: var(--accent-fuschia);
+                }
+
+                & .pink {
+                    background-color: var(--accent-pink);
+                }
+
+                & .danger {
+                    background-color: var(--danger);
+                }
+
+                & .orange {
+                    background-color: var(--accent-orange);
+                }
+
+                & .yellow {
+                    background-color: var(--accent-yellow);
+                }
+
+                & .lime {
+                    background-color: var(--accent-lime);
+                }
+
+                & .green {
+                    background-color: var(--accent-lime);
+                }
+
+                & .cyan {
+                    background-color: var(--accent-cyan);
+                }
+            }
+        }
     }
-}
