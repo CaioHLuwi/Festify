@@ -8,6 +8,7 @@ fieldset {
             font: var(--font-body-sm);
             color: var(--text-body);
             margin-bottom: .75rem;
+            margin-top: 1.75rem;
         }
 
         & .input-wrapper {

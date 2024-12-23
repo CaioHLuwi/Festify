@@ -1,7 +1,6 @@
 @import url(fields/index.css);
 
 form {
-    margin-top: 2.625rem;
 
     & fieldset {
         border: none;
