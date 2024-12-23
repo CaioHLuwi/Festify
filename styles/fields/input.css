@@ -1,0 +1,117 @@
+form {
+    & fieldset {
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+
+        & label {
+            font: var(--font-body-sm);
+            color: var(--text-body);
+            margin-bottom: .75rem;
+        }
+
+        & .input-wrapper {
+            display: flex;
+            flex-direction: column;
+
+            & input,
+            & textarea {
+                width: 100%;
+                background-color: var(--input-background);
+                border-radius: .5rem;
+                padding: 1rem;
+                border: 1px solid var(--input-stroke);
+                color: var(--input-placeholder);
+                font: var(--font-body-md);
+                outline: none;
+
+                &::placeholder {
+                    color: var(--input-placeholder);
+                    font: var(--font-body-md);
+                }
+
+                &:focus {
+                    border: 1px solid var(--brand-light);
+                }
+            }
+        }
+
+        & .double-input {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(2, 1fr);
+
+            & .input-select {
+                display: flex;
+                flex-direction: column;
+            }
+
+            & .input-options {
+                display: flex;
+                background-color: var(--input-background);
+                border-radius: .5rem;
+                padding: .45rem;
+                border: 1px solid var(--input-stroke);
+                position: relative;
+                gap: .5rem;
+
+                & .option {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: .25rem;
+                    padding: .25rem;
+                    font: var(--font-body-xs);
+                    color: var(--text-heading);
+
+                    & input {
+                        all: unset;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    & svg {
+                        width: 1.5rem;
+                    }
+
+                    &:has(:checked){
+                        background-color: #2d3136;
+                        border-radius: .25rem;
+
+                        & svg path{ 
+                            fill: var(--brand-light);
+                        }
+                    }
+                }
+            }
+        }
+
+        & .textarea-wrapper {
+
+            & textarea {
+                margin-top: 0.75rem;
+                width: 100%;
+                background-color: var(--input-background);
+                border-radius: .5rem;
+                padding: 1rem;
+                border: 1px solid var(--input-stroke);
+                color: var(--input-placeholder);
+                font: var(--font-body-md);
+                outline: none;
+
+                &::placeholder {
+                    color: var(--input-placeholder);
+                    font: var(--font-body-md);
+                }
+
+                &:focus {
+                    border: 1px solid var(--brand-light);
+                }
+            }
+        }
+    }
+}
