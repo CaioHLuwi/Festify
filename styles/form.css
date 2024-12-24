@@ -12,7 +12,7 @@ form {
             font-size: 1.25rem;
             color: var(--text-heading);
             gap: .75rem;
-            margin-bottom: 1.5rem;
+
 
             & svg {
                 width: 1.5rem;
