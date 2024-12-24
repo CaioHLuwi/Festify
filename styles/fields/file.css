@@ -1,0 +1,27 @@
+.double-input {
+    
+    & .input-wrapper {
+        position: relative;
+
+        & input[type="file"] {
+            position: absolute;
+            opacity: 0;
+            inset: 0;
+        }
+
+        & .input-file-button {
+            background-color: var(--shape-button);
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+            font: var(--font-body-sm);
+            color: var(--text-heading);
+            padding: 0.75rem 0.25rem;
+            
+            & svg {
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+    }
+}
