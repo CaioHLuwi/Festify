@@ -37,6 +37,12 @@ fieldset {
             }
         }
 
+        &:not(:valid) {
+            .error {
+                display: block;
+            }
+        }
+
         & .double-input {
             display: grid;
             gap: 1rem;
@@ -87,6 +93,10 @@ fieldset {
                             fill: var(--brand-light);
                         }
                     }
+
+                    &:hover {
+                        background-color: var(--shape-hover);
+                    }
                 }
             }
         }
@@ -125,6 +135,10 @@ fieldset {
                 height: 2.5rem;
                 background-color: var(--shape-button);
                 border-radius: 50%;
+
+                &:hover {
+                    background-color: var(--shape-hover);
+                }
             }
 
             & .color-item {

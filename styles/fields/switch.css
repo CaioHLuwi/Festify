@@ -1,0 +1,63 @@
+.switch-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    & .switch-input {
+        display: flex;
+        align-items: center;
+        background-color: var(--input-base);
+        width: 4rem;
+        height: 2rem;
+        padding: .25rem;
+        border: 1px solid var(--input-stroke);
+        border-radius: 999px;
+        position: relative;
+        transition: background-color 0.3s ease-in-out;
+    
+        & .switch-input-radio {
+            background-color: var(--input-stroke);
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            transition: all 0.6s ease-in-out;
+    
+            & input {
+                inset: 0;
+                position: absolute;
+                appearance: none;
+                opacity: 0;
+            }
+            
+        }
+    
+            &:has(input:checked){
+                background-color: var(--brand-light);
+                border: 1px solid var(--input-stroke);
+    
+                & .switch-input-radio {
+                    position: absolute;
+                    left: 2rem;
+                    background-color: #fff;
+                }
+    
+                & ~ .text-switch::after {
+                    content: "Claro";
+                }
+    
+                & ~ .text-switch::before {
+                    content: "";
+                }
+            }
+            
+            & ~ .text-switch::before {
+                content: "Escuro";
+            }
+    
+            & ~ .text-switch {
+                color: var(--text-heading);
+                font: var(--font-body-md);
+            }
+    }
+}
+

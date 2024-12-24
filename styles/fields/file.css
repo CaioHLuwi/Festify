@@ -5,23 +5,50 @@
 
         & input[type="file"] {
             position: absolute;
+            color: var(--text-body);
             opacity: 0;
             inset: 0;
+            border: none;
         }
 
-        & .input-file-button {
-            background-color: var(--shape-button);
+        & .input-file-wrapper {
             display: flex;
-            gap: .5rem;
             align-items: center;
-            font: var(--font-body-sm);
-            color: var(--text-heading);
-            padding: 0.75rem 0.25rem;
-            
-            & svg {
-                width: 1rem;
-                height: 1rem;
+            gap: 1rem;
+
+            & button {
+                background-color: var(--shape-button);
+                display: flex;
+                gap: .5rem;
+                align-items: center;
+                font: var(--font-body-sm);
+                color: var(--text-heading);
+                padding: 0.75rem 0.75rem;
+                border: none;
+                border-radius: 0.5rem;
+                
+    
+                & svg {
+                    width: 1rem;
+                    height: 1rem;
+    
+                    & path {
+                        fill: var(--brand-light);
+                    }
+                }
+            }
+
+            & span {
+                color: var(--text-body);
+                font: var(--font-body-sm);
             }
         }
     }
+}
+
+.error {
+    color: var(--danger);
+    display: none;
+    margin-top: .2rem;
+    gap: .25rem;
 }
